@@ -5,7 +5,7 @@ cloud storage and NoSQL cloud database that runs on Google Cloud Platform.
 
 ![1](https://github.com/GrigoryLunev/BSMS_Bus_Stop_Maintenance_System/assets/30550611/ef71b721-e673-4814-8694-1d9b437c48a6)
 
-![2](https://github.com/GrigoryLunev/BSMS_Bus_Stop_Maintenance_System/assets/30550611/70fcfc7d-fe3f-4051-bf58-6810ad0a6d95)              ![3](https://github.com/GrigoryLunev/BSMS_Bus_Stop_Maintenance_System/assets/30550611/aea8cbea-75d1-4357-9676-773030d82625)
+![2](https://github.com/GrigoryLunev/BSMS_Bus_Stop_Maintenance_System/assets/30550611/70fcfc7d-fe3f-4051-bf58-6810ad0a6d95) ![3](https://github.com/GrigoryLunev/BSMS_Bus_Stop_Maintenance_System/assets/30550611/aea8cbea-75d1-4357-9676-773030d82625)
 
 
 
