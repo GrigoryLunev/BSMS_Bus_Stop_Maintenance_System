@@ -1,0 +1,77 @@
+﻿@page
+@model BSCare.Pages.report.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>יצירת דיווח חדש</h1>
+<form action="" method="post">
+    <button asp-page="../Index2" asp-page-handler="Back">Back</button>
+</form>
+<h4>דיווח</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Report.ReportSource" class="control-label"></label>
+                <select asp-for="Report.ReportSource" class="form-control" asp-items="Model.SelectList"></select>
+                @*<input asp-for="Report.ReportSource" class="form-control" />*@
+                <span asp-validation-for="Report.ReportSource" class="text-danger"></span>
+            </div>
+            <div class="form-group">G
+                <label asp-for="Report.OpenDate" class="control-label"></label>
+                <input asp-for="Report.OpenDate" class="form-control" />
+                <span asp-validation-for="Report.OpenDate" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="Report.CloseDate" class="control-label"></label>
+                <input asp-for="Report.CloseDate" class="form-control" />
+                <span asp-validation-for="Report.CloseDate" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="Report.Status" class="control-label"></label>
+                @*<input asp-for="Report.Status" class="form-control" />*@
+                <select asp-for="Report.Status" class="form-control" asp-items="Model.StatusSelectList"></select>
+                <span asp-validation-for="Report.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Report.StopId" class="control-label"></label>
+                @*<input asp-for="Report.StopId" class="form-control" />*@
+                
+                <select asp-for="Report.StopId" class="form-control" asp-items="new SelectList(Model.stopNum)"></select>
+                
+                <span asp-validation-for="Report.StopId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Report.HazardType" class="control-label"></label>
+                @*<input asp-for="Report.HazardType" class="form-control" />*@
+                <select asp-for="Report.HazardType" class="form-control" asp-items="Model.HazardSelectList"></select>
+                <span asp-validation-for="Report.HazardType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Report.Description" class="control-label"></label>
+                <input asp-for="Report.Description" class="form-control" />
+                <span asp-validation-for="Report.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Report.PicPath" class="control-label"></label>
+                <input asp-for="Report.PicPath" class="form-control" />
+                <span asp-validation-for="Report.PicPath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,52 @@
+﻿@page
+@model BSCare.Pages.repair.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+@*<h1>Create</h1>*@
+<form action="" method="post">
+    <button asp-page="../Index2" asp-page-handler="Back">Back</button>
+</form>
+
+<h4>דיווח תיקון ועלויות</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Repair.ReportId" class="control-label"></label>
+                <input asp-for="Repair.ReportId" class="form-control" value="@Model.reportId" readonly="@(true)" />
+                @*<select asp-for="Repair.ReportId" class ="form-control" asp-items="ViewBag.ReportId"></select>*@
+            </div>
+            <div class="form-group">
+                <label asp-for="Repair.RepairAction" class="control-label"></label>
+                <input asp-for="Repair.RepairAction" class="form-control" />
+                <span asp-validation-for="Repair.RepairAction" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Repair.ActionPrice" class="control-label"></label>
+                <input asp-for="Repair.ActionPrice" class="form-control" />
+                <span asp-validation-for="Repair.ActionPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Repair.StopCode" class="control-label"></label>
+                <input asp-for="Repair.StopCode" class="form-control" value="@Model.Stop_code" readonly="@(true)" />
+                <span asp-validation-for="Repair.StopCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

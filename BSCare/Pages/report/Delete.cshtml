@@ -1,0 +1,70 @@
+﻿@page
+@model BSCare.Pages.report.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Report</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Report.ReportSource)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Report.ReportSource)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Report.OpenDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Report.OpenDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Report.CloseDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Report.CloseDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Report.Status)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Report.Status)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Report.StopId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Report.StopId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Report.HazardType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Report.HazardType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Report.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Report.Description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Report.PicPath)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Report.PicPath)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Report.ReportId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

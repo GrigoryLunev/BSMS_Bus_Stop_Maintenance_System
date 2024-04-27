@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BSCare", "BSCare\BSCare.csproj", "{AA7D85C7-BACF-4399-8E56-F7C588E9012A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA7D85C7-BACF-4399-8E56-F7C588E9012A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA7D85C7-BACF-4399-8E56-F7C588E9012A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA7D85C7-BACF-4399-8E56-F7C588E9012A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA7D85C7-BACF-4399-8E56-F7C588E9012A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE8FA5E4-E555-4B9E-AB40-F20EC666B6A3}
+	EndGlobalSection
+EndGlobal

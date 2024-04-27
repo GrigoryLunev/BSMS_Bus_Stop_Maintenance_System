@@ -1,0 +1,20 @@
+﻿@*@page
+@model BSCare.Pages.Shared.DisplayTemplates.CustomStatusModel
+@{
+}*@
+
+
+@model System.Int32
+
+@if (Model == 0)
+{
+    @:חדש במערכת
+}
+else if (Model == 1)
+{
+    @:עבר לטיפול
+}
+else if (Model == 2)
+{
+    @:טופל \ נסגר
+}

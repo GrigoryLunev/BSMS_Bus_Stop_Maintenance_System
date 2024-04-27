@@ -1,0 +1,97 @@
+﻿@page
+@model BSCare.Pages.stops.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3>רשימת תחנות אוטובוס בעיר @Html.DisplayFor(model => model.Frontcity)</h3>
+
+@*
+<p>
+    <a asp-page="Create">Create New</a>
+</p>*@
+
+<form action="" method="post">
+    <button asp-page="../Index2" asp-page-handler="Back">Back</button>
+</form>
+
+<form class="" action="" method="post">
+    <table>
+        <tr>
+            <td><button asp-page="" asp-page-handler="FindCity">סנן לפי מס תחנה</button></td>
+            @*<td>@Html.DropDownListFor(m => m.Frontcity, new SelectList(Model.cities))</td>*@
+            <td><input asp-for="@Model.find" class="form-control" /></td>
+        </tr>
+    </table>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Stop[0].StopCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stop[0].StopName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stop[0].StopDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stop[0].StopLat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stop[0].StopLon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stop[0].LocationType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stop[0].ParentStation)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Stop[0].ZoneId)
+            </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Stop) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StopCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StopName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StopDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StopLat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StopLon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocationType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ParentStation)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.ZoneId)
+            </td>*@
+            @*<td>
+                <a asp-page="./Edit" asp-route-id="@item.StopId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.StopId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.StopId">Delete</a>
+            </td>*@
+            <td>
+                    <a asp-page="../report/Create2" asp-route-id="@item.StopCode">יצירת דיווח חדש עבור תחנה זו</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

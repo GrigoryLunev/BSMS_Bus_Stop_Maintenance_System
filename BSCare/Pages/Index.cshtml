@@ -1,0 +1,55 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to BSCare 2023</h1>
+    
+</div>
+
+
+<form class="select-city" action="" method="post">
+    <table>
+        <tr>
+            <td><button asp-page="Index2" asp-page-handler="SelectCity">בחר עיר</button></td>
+            <td>@Html.DropDownListFor(m => m.Frontcity, new SelectList(Model.cities))</td>
+        </tr>
+    </table>
+</form>
+
+
+
+<div >
+
+
+
+
+</div>
+
+
+@*<div>
+    <a href="~/stops">Stops</a>
+</div>
+
+<div>
+    <a href="~/report">Reports</a>
+</div>*@
+
+
+
+
+@*<form action="" method="post">
+    <table>
+        <tr>
+            <td><button asp-page="" asp-page-handler="DownLoadFile">Download GTFS file from MOT</button></td>
+        </tr>
+        <tr>
+            <td><button asp-page="" asp-page-handler="UnzipGTFS">Unzip GTFS file</button></td>
+        </tr>
+        <tr>
+            <td><button asp-page="" asp-page-handler="InsertToDB">Insert Stops.txt to DB</button></td>
+        </tr>
+    </table>
+</form>*@

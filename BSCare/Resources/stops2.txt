@@ -1,0 +1,2 @@
+stop_id,stop_code,stop_name,stop_desc,stop_lat,stop_lon,location_type,parent_station,zone_id
+1,38831,בי''ס בר לב/בן יהודה,רחוב: בן יהודה 74 עיר: כפר סבא רציף:  קומה: ,32.183985,34.917554,0,,38831

@@ -1,0 +1,87 @@
+﻿@page
+@model BSCare.Pages.report.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3>דיווחים בעיר @Html.DisplayFor(model => model.Frontcity)</h3>
+
+<p>
+    <a asp-page="Create">יצירת דיווח חדש</a>
+    <form action="" method="post">
+        <button asp-page="../Index2" asp-page-handler="Back">Back</button>
+    </form>
+    
+</p>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Report[0].ReportSource)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Report[0].OpenDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Report[0].CloseDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Report[0].Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Report[0].StopId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Report[0].HazardType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Report[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Report[0].PicPath)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Report) {
+        <tr>
+                
+            <td>
+                @Html.DisplayFor(modelItem => item.ReportSource, "CustomInt")
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpenDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CloseDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status, "CustomStatus")
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StopId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HazardType, "CustomHazardType")
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PicPath)
+            </td>
+            <td>
+                <a asp-page="./Edit2" asp-route-id="@item.ReportId">עדכן דיווח</a> |
+                <a asp-page="./Details" asp-route-id="@item.ReportId">פרטים</a>
+                @*<a asp-page="./Delete" asp-route-id="@item.ReportId">Delete</a>*@
+                @*<a asp-page="../repair/Create" asp-route-id="@item.ReportId" asp-route-code="@item.StopId">דווח על ביצוע תיקון ועלויות</a>*@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

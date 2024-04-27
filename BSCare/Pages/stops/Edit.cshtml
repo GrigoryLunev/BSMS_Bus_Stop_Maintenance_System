@@ -1,0 +1,70 @@
+﻿@page
+@model BSCare.Pages.stops.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Stop</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Stop.StopId" />
+            <div class="form-group">
+                <label asp-for="Stop.StopCode" class="control-label"></label>
+                <input asp-for="Stop.StopCode" class="form-control" />
+                <span asp-validation-for="Stop.StopCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Stop.StopName" class="control-label"></label>
+                <input asp-for="Stop.StopName" class="form-control" />
+                <span asp-validation-for="Stop.StopName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Stop.StopDesc" class="control-label"></label>
+                <input asp-for="Stop.StopDesc" class="form-control" />
+                <span asp-validation-for="Stop.StopDesc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Stop.StopLat" class="control-label"></label>
+                <input asp-for="Stop.StopLat" class="form-control" />
+                <span asp-validation-for="Stop.StopLat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Stop.StopLon" class="control-label"></label>
+                <input asp-for="Stop.StopLon" class="form-control" />
+                <span asp-validation-for="Stop.StopLon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Stop.LocationType" class="control-label"></label>
+                <input asp-for="Stop.LocationType" class="form-control" />
+                <span asp-validation-for="Stop.LocationType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Stop.ParentStation" class="control-label"></label>
+                <input asp-for="Stop.ParentStation" class="form-control" />
+                <span asp-validation-for="Stop.ParentStation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Stop.ZoneId" class="control-label"></label>
+                <input asp-for="Stop.ZoneId" class="form-control" />
+                <span asp-validation-for="Stop.ZoneId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

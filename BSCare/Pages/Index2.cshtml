@@ -1,0 +1,107 @@
+﻿@page
+@model BSCare.Pages.Index2Model
+@{
+    ViewData["Title"] = "City Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@Html.DisplayFor(model => model.Frontcity)</h1>
+</div>
+
+
+<div class="data-table">
+    <div>
+        <form action="" method="post">
+            <h2>@Html.DisplayFor(model => model.stopCount)</h2>
+            <h6>תחנות אוטובוס</h6>
+            <button asp-page="stops/Index" asp-page-handler="Q1Index2">פרטים ופעולות</button>
+        </form>
+    </div>
+
+    <div>
+        <form action="" method="post">
+            <h2>@Html.DisplayFor(model => model.OpenReportsWeb)</h2>
+            <h6>דיווחים פתוחים אשר נפתחו עי עובד רשות מוניציפלית</h6>
+            <button asp-page="report/Index" asp-page-handler="Q2Index2">פרטים ופעולות</button>
+            @Html.Hidden("source", "0")
+            @Html.Hidden("Frontcity", Model.Frontcity)
+        </form>
+    </div>
+
+    <div>
+        <form action="" method="post">
+            <h2>@Html.DisplayFor(model => model.OpenReportCell)</h2>
+            <h6>דיווחים פתוחים אשר נפתחו עי משתמשי תחבורה ציבורית</h6>
+            <button asp-page="report/Index" asp-page-handler="Q2Index2">פרטים ופעולות</button>
+            @Html.Hidden("source", "1")
+        </form>
+    </div>
+
+    <div>
+        <form action="" method="post">
+            <h2>@Html.DisplayFor(model => model.forwardedReports)</h2>
+            <h6>דיווחים אשר הועברו לטיפול</h6>
+            <button asp-page="report/Index2" asp-page-handler="Q3Index2">פרטים ופעולות</button>
+        </form>
+    </div>
+    <div>
+        <form action="" method="post">
+            <h2>@Html.DisplayFor(model => model.closedReports)</h2>
+            <h6>דיווחים אשר נסגרו</h6>
+            <button asp-page="report/Index3" asp-page-handler="Q4Index2">פרטים ופעולות</button>
+        </form>
+    </div>
+    <div>
+        <form action="" method="post">
+            <h2>@Html.DisplayFor(model => model.numOfrepair)</h2>
+            <h6>דוחות תיקונים בעיר</h6>
+            <button asp-page="repair/Index" asp-page-handler="Q5Index2">פרטים ופעולות</button>
+        </form>
+    </div>
+    <div>
+        <form action="" method="post">
+            <h2>דוחות</h2>
+            <h6>דוח עלות תיקונים</h6>
+            <button asp-page="repair/Index2" asp-page-handler="Q5Index2">פרטים ופעולות</button>
+        </form>
+    </div>
+    <div>
+        <form action="" method="post">
+            <h4>ניהול חוזי תחזוקה</h4>
+            <h6>פיתוח עתידי</h6>
+            <button asp-page="maintenance">פרטים</button>
+
+        </form>
+    </div>
+    <div>
+        <form action="" method="post">
+            <h4>יומן תחזוקה קבועה</h4>
+            <h6>פיתוח עתידי</h6>
+            <button asp-page="regular">פרטים</button>
+        </form>
+    </div>
+    <div>
+        <form action="" method="post">
+            <h4>ניהול שטחי פרסום בתחנות</h4>
+            <h6>פיתוח עתידי</h6>
+            <button asp-page="advertising">פרטים</button>
+        </form>
+    </div>
+    <div>
+        <form action="" method="post">
+            <h4>הגשת תלונה למפעיל הקווים</h4>
+            <h6>פיתוח עתידי</h6>
+            <button asp-page="operator">פרטים</button>
+        </form>
+    </div>
+    <div>
+        <form action="" method="post">
+            <h4>פיתוח עתידי</h4>
+            <h6></h6>
+        </form>
+    </div>
+</div>
+
+
+
+

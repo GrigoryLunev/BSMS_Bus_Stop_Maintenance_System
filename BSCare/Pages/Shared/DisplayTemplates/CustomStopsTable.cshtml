@@ -1,0 +1,17 @@
+﻿@*@page
+@model BSCare.Pages.Shared.DisplayTemplates.CustomStopsTableModel
+@{
+}*@
+
+@if (Model == "StopCode")
+{
+    @:מספר תחנה
+}
+else if (Model == 1)
+{
+    @:עבר לטיפול
+}
+else if (Model == 2)
+{
+    @:טופל \ נסגר
+}

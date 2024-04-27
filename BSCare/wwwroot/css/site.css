@@ -1,0 +1,135 @@
+html {
+  font-size: 14px;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    direction: rtl;
+  margin-bottom: 60px;
+}
+
+.select-city {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 30px;
+    border-radius: 5px;
+    padding: 120px 30px;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+.select-city table{
+    margin:0 auto;
+}
+
+.report-info {
+    display: flex;
+}
+
+.report-image {
+    width: 35%;
+}
+
+.report-image img {
+    object-fit: contain;
+    max-width:300px;
+}
+
+.data-table {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.data-table > div {
+    flex-basis: 30%;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    background-color: #fdffc5;
+}
+
+.data-table > div button {
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+    background-color: #ffffff;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #666666;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+}
+
+.data-table > div:nth-of-type(1) {
+    background-color: #c1efff; /*Blue*/
+}
+
+
+.data-table > div:nth-of-type(2) {
+    background-color: #ffd2d2; /*Red*/
+}
+
+.data-table > div:nth-of-type(3) {
+    background-color: #ffd2d2; /*Red*/
+}
+
+.data-table > div:nth-of-type(4) {
+    background-color: #ffecd2; /*Orange*/
+}
+
+.data-table > div:nth-of-type(5) {
+    background-color: #d1ffd8; /*Green*/
+}
+
+.data-table > div:nth-of-type(6) {
+    background-color: #e6e6e6; /*Grey*/
+}
+
+.data-table > div:nth-of-type(7) {
+    background-color: #e6e6e6; /*Grey*/
+}
+
+.data-table > div:nth-of-type(8) {
+   /* background-color: #e6e6e6;*/ /*Grey*/
+}
+
+/*
+.data-table h4 {
+    text-align: right;
+    padding-right: 15px;
+}
+*/
+.charts {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.charts > div {
+    width: 47%;
+    text-align: center;
+}
+
+.charts > div > div,
+.charts > div > div > span {
+    width: inherit;
+    height: unset;
+}
+
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}

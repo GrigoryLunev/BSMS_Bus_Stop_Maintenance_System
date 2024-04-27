@@ -1,0 +1,77 @@
+﻿@page
+@model BSCare.Pages.report.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>פרטי דיווח</h1>
+
+<form action="" method="post">
+    <button asp-page="../Index2" asp-page-handler="Back">Back</button>
+</form>
+<div class="report-info">
+    <div class="report-data">
+    @*<h4>Report</h4>*@
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Report.ReportSource)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Report.ReportSource, "CustomInt")
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Report.OpenDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Report.OpenDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Report.CloseDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Report.CloseDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Report.Status)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Report.Status, "CustomStatus")
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Report.StopId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Report.StopId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Report.HazardType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Report.HazardType, "CustomHazardType")
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Report.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Report.Description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Report.PicPath)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Report.PicPath)
+        </dd>
+    </dl>
+</div>
+
+    <div class ="report-image">
+        <img src="@Model.Report.PicPath" alt="" />
+    </div>
+</div>
+@*<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Report?.ReportId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>*@
+

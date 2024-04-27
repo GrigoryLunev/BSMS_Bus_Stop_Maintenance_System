@@ -1,0 +1,43 @@
+﻿@page
+@model BSCare.Pages.repair.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Repair</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Repair.RepairAction)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Repair.RepairAction)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Repair.ActionPrice)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Repair.ActionPrice)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Repair.StopCode)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Repair.StopCode)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Repair.Report)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Repair.Report.ReportId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Repair?.ExpensesId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

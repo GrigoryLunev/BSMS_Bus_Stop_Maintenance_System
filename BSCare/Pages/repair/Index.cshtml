@@ -1,0 +1,58 @@
+﻿@page
+@model BSCare.Pages.repair.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>דוחות תיקונים ועלויות</h1>
+
+<form action="" method="post">
+    <button asp-page="../Index2" asp-page-handler="Back">Back</button>
+</form>
+@*<p>
+    <a asp-page="Create">Create New</a>
+</p>*@
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Repair[0].RepairAction)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Repair[0].ActionPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Repair[0].StopCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Repair[0].Report)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Repair) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RepairAction)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActionPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StopCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReportId)
+            </td>
+            @*<td>
+                <a asp-page="./Edit" asp-route-id="@item.ExpensesId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ExpensesId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ExpensesId">Delete</a>
+            </td>*@
+        </tr>
+}
+    </tbody>
+</table>

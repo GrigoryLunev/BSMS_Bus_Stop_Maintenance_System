@@ -1,0 +1,81 @@
+﻿@page
+@model BSCare.Pages.repair.IndexModel2
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>דוח עלות תיקונים</h1>
+
+<form action="" method="post">
+    <button asp-page="../Index2" asp-page-handler="Back">Back</button>
+</form>
+@*<p>
+    <a asp-page="Create">Create New</a>
+</p>*@
+
+<div>
+
+</div>
+
+<form action="" method="post">
+    <table>
+        <tr>
+            <td><button asp-page="" asp-page-handler="Q6Index2">בצע סינון עלויות לפי שנים</button></td>
+            <td>@Html.DropDownListFor(m => m.y, new SelectList(Model.years))</td>            
+        </tr>
+        <tr>
+            <td><h5>סה"כ עלויות תחזוקה ותיקונים @Html.DisplayFor(m=>m.totalCost)</h5></td>
+        </tr>
+    </table>
+</form>
+
+<input type="button" value="Print Form" onclick="window.print()" />
+
+<div class="charts">
+    <div class="total-cost">@Html.Raw(Model.ChartJson)</div>
+    <div class="yearly-distribution">@Html.Raw(Model.ChartJson2)</div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Repair[0].RepairAction)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Repair[0].ActionPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Repair[0].StopCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Repair[0].Report)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Repair) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RepairAction)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActionPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StopCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReportId)
+            </td>
+           @*<td>
+                <a asp-page="./Edit" asp-route-id="@item.ExpensesId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ExpensesId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ExpensesId">Delete</a>
+            </td>*@
+        </tr>
+}
+    </tbody>
+</table>
