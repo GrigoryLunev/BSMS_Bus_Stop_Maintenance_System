@@ -3,6 +3,9 @@ BSMS is a comprehensive client-server architecture system developed in ASP.NET C
 an Android mobile application developed in Java, SQL database,
 cloud storage and NoSQL cloud database that runs on Google Cloud Platform.
 
+
+![arch](https://github.com/GrigoryLunev/BSMS_Bus_Stop_Maintenance_System/assets/30550611/8755c417-e88d-4dd8-8df2-fb00f1a99154)
+
 ![1](https://github.com/GrigoryLunev/BSMS_Bus_Stop_Maintenance_System/assets/30550611/ef71b721-e673-4814-8694-1d9b437c48a6)
 
 ![2](https://github.com/GrigoryLunev/BSMS_Bus_Stop_Maintenance_System/assets/30550611/70fcfc7d-fe3f-4051-bf58-6810ad0a6d95) ![3](https://github.com/GrigoryLunev/BSMS_Bus_Stop_Maintenance_System/assets/30550611/aea8cbea-75d1-4357-9676-773030d82625)
